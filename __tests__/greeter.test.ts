@@ -1,10 +1,10 @@
-import { greeter } from "./greeter";
-describe("greeter", () => {
-  describe("helloWorld", () => {
-    it("should return `Hello world!`", () => {
+import { greeter } from '../src/greeter';
+describe('greeter', () => {
+  describe('helloWorld', () => {
+    it('should return `Hello world!`', () => {
       // Arrange
       const sut = greeter();
-      const expected = "Hello world!";
+      const expected = 'Hello world!';
 
       // Act
       const actual = sut.helloWorld();
@@ -13,13 +13,13 @@ describe("greeter", () => {
       expect(actual).toBe(expected);
     });
   });
-  describe("helloPerson", () => {
-    describe("empty name", () => {
-      it("should return `Hello !`", () => {
+  describe('helloPerson', () => {
+    describe('empty name', () => {
+      it('should return `Hello !`', () => {
         // Arrange
         const sut = greeter();
-        const input = "";
-        const expected = "Hello !";
+        const input = '';
+        const expected = 'Hello !';
 
         // Act
         const actual = sut.helloPerson(input);
@@ -28,12 +28,12 @@ describe("greeter", () => {
         expect(actual).toBe(expected);
       });
     });
-    describe("given name", () => {
-      it("should return `Hello `NAME`!`", () => {
+    describe('given name', () => {
+      it('should return `Hello `NAME`!`', () => {
         // Arrange
         const sut = greeter();
-        const input = "Peter";
-        const expected = "Hello Peter!";
+        const input = 'Peter';
+        const expected = 'Hello Peter!';
 
         // Act
         const actual = sut.helloPerson(input);

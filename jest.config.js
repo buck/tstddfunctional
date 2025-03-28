@@ -4,6 +4,13 @@ export default {
   transform: {
     "^.+\\.(t|j)sx?$": "@swc/jest",
   },
+  transformIgnorePatterns: ['/node_modules/'],
+  roots: [
+    '<rootDir>/__tests__/'
+  ],
+  testMatch: [
+    '<rootDir>/__tests__/**/*.ts',
+  ],
   "watchPlugins": [
     // '/old/projects/tddts/watchAudioResultsPlugin.ts',
     // 'jest-watch-random'
